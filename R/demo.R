@@ -1,4 +1,4 @@
-#' Demo EDT
+#' Demo MSAT
 #'
 #' This function launches a demo for the RAT.
 #'
@@ -16,29 +16,29 @@
 #' @param language The language you want to run your demo in.
 #' Possible languages include English (\code{"en"}), German (\code{"de"}), Russian (\code{"ru"}) and Nederlands (\code{"nl"}).
 #' The first language is selected by default
-#' @param ... Further arguments to be passed to \code{\link{EDT}()}.
+#' @param ... Further arguments to be passed to \code{\link{MSAT}()}.
 #' @export
 #'
-EDT_demo <- function(num_items = 3L,
-                     feedback = EDT::EDT_feedback_with_score(),
-                     admin_password = "demo",
-                     researcher_email = "longgold@gold.uc.ak",
-                     dict = EDT::EDT_dict,
+MSAT_demo <- function(num_items = 3L,
+                     feedback = MSAT::MSAT_feedback_with_score(),
+                     admin_password = "test123",
+                     researcher_email = "robin.hake@uni-oldenburg.de",
+                     dict = MSAT::MSAT_dict,
                      language = "en",
                      ...) {
   elts <- psychTestR::join(
-    EDT_welcome_page(dict = dict),
-    EDT::EDT(num_items = num_items,
+    MSAT_welcome_page(dict = dict),
+    MSAT::MSAT(num_items = num_items,
              with_welcome = FALSE,
              feedback = feedback,
              dict = dict,
              ...),
-      EDT_final_page(dict = dict)
+      MSAT_final_page(dict = dict)
   )
 
   psychTestR::make_test(
     elts,
-    opt = psychTestR::test_options(title = "Emotion Discrimination Test",
+    opt = psychTestR::test_options(title = "Musical Scene Analysis Test",
                                    admin_password = admin_password,
                                    researcher_email = researcher_email,
                                    demo = TRUE,

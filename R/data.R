@@ -1,14 +1,14 @@
-#' EDT  dictionary
+#' MSAT  dictionary
 #'
-#' The default internationalisation dictionary used by the EDT.
-#' @name EDT_dict
+#' The default internationalisation dictionary used by the MSAT.
+#' @name MSAT_dict
 #' @docType data
 NULL
 
-#' EDT item bank
+#' MSAT item bank
 #'
-#' The EDT's item bank
-#' @name EDT_item_bank
+#' The MSAT's item bank
+#' @name MSAT_item_bank
 #' @docType data
 NULL
 

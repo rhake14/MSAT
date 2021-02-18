@@ -1,12 +1,12 @@
-#' EDT feedback (with score)
+#' MSAT feedback (with score)
 #'
 #' Here the participant is given textual feedback at the end of the test.
 #' @param dict The psychTestR dictionary used for internationalisation.
 #' @export
 #' @examples
 #' \dontrun{
-#' EDT_demo(feedback = EDT_feedback_with_score())}
-EDT_feedback_with_score <- function(dict = EDT::EDT_dict) {
+#' MSAT_demo(feedback = MSAT_feedback_with_score())}
+MSAT_feedback_with_score <- function(dict = MSAT::MSAT_dict) {
   psychTestR::new_timeline(
       psychTestR::reactive_page(function(state, ...) {
         #browser()
@@ -17,10 +17,10 @@ EDT_feedback_with_score <- function(dict = EDT::EDT_dict) {
         #num_question <- length(results[[1]])
         #messagef("Sum scores: %d, total items: %d", sum_score, num_question)
 
-        num_correct <- round(results$EDT$score * results$EDT$num_questions)
+        num_correct <- round(results$MSAT$score * results$MSAT$num_questions)
         text_finish <- psychTestR::i18n("COMPLETED",
                                         html = TRUE,
-                                        sub = list(num_question = results$EDT$num_question,
+                                        sub = list(num_question = results$MSAT$num_question,
                                                    num_correct = num_correct))
         psychTestR::page(
           ui = shiny::div(
@@ -33,7 +33,7 @@ EDT_feedback_with_score <- function(dict = EDT::EDT_dict) {
   )
 }
 
-EDT_feedback_graph_normal_curve <- function(perc_correct, x_min = 40, x_max = 160, x_mean = 100, x_sd = 15) {
+MSAT_feedback_graph_normal_curve <- function(perc_correct, x_min = 40, x_max = 160, x_mean = 100, x_sd = 15) {
   q <-
     ggplot2::ggplot(data.frame(x = c(x_min, x_max)), ggplot2::aes(x)) +
     ggplot2::stat_function(fun = stats::dnorm, args = list(mean = x_mean, sd = x_sd)) +
@@ -53,15 +53,15 @@ EDT_feedback_graph_normal_curve <- function(perc_correct, x_min = 40, x_max = 16
   q <- q + ggplot2::ggtitle(main_title)
   plotly::ggplotly(q, width = 600, height = 450)
 }
-#' EDT feedback (with graph)
+#' MSAT feedback (with graph)
 #'
 #' Here the participant is given textual and graphical feedback at the end of the test.
 #' @param dict The psychTestR dictionary used for internationalisation.
 #' @export
 #' @examples
 #' \dontrun{
-#' EDT_demo(feedback = EDT_feedback_with_score())}
-EDT_feedback_with_graph <- function(dict = EDT::EDT_dict) {
+#' MSAT_demo(feedback = MSAT_feedback_with_score())}
+MSAT_feedback_with_graph <- function(dict = MSAT::MSAT_dict) {
   psychTestR::new_timeline(
       psychTestR::reactive_page(function(state, ...) {
         #browser()
@@ -73,12 +73,12 @@ EDT_feedback_with_graph <- function(dict = EDT::EDT_dict) {
         #num_question <- length(results[[1]])
         #perc_correct <- sum_score/num_question
         #printf("Sum scores: %d, total items: %d perc_correct: %.2f", sum_score, num_question, perc_correct)
-        num_correct <- round(results$EDT$score * results$EDT$num_questions)
+        num_correct <- round(results$MSAT$score * results$MSAT$num_questions)
         text_finish <- psychTestR::i18n("COMPLETED",
                                         html = TRUE,
-                                        sub = list(num_question = results$EDT$num_questions,
+                                        sub = list(num_question = results$MSAT$num_questions,
                                                    num_correct = num_correct))
-        norm_plot <- EDT_feedback_graph_normal_curve(results$EDT$score)
+        norm_plot <- MSAT_feedback_graph_normal_curve(results$MSAT$score)
         psychTestR::page(
           ui = shiny::div(
             shiny::p(text_finish),
