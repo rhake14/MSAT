@@ -1,10 +1,10 @@
-Package: EDT
+Package: MSAT
 Type: Package
-Title: Emotion Discrimination Test
+Title: Musical Scene Analysis Test
 Version: 0.3.2
-Author: Klaus Frieler
+Author: Robin Hake, Michel Bürgel, Daniel Müllensiefen, Kai Siedenburg, Klaus Frieler 
 Maintainer: Klaus Frieler <kf@omniversum.de>
-Description: Implementation of a musical  emotion discrimination test.
+Description: Implementation of a musical scene anylsis test.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
