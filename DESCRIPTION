@@ -2,7 +2,7 @@ Package: MSAT
 Type: Package
 Title: Musical Scene Analysis Test
 Version: 0.3.2
-Author: Robin Hake, Michel Bürgel, Daniel Müllensiefen, Kai Siedenburg, Klaus Frieler 
+Author: Robin Hake
 Maintainer: Robin Hake <robin.hake@uni-oldenburg.de>
 Description: Implementation of a musical scene anylsis test.
 License: MIT + file LICENSE
