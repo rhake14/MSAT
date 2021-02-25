@@ -12,7 +12,7 @@ MSAT_standalone(
   with_welcome = TRUE,
   admin_password = "test123",
   researcher_email = "robin.hake@uni-oldenburg.de",
-  languages = c("en", "de", "ru", "nl"),
+  languages = c("en", "de"),
   dict = MSAT::MSAT_dict,
   validate_id = "auto",
   ...

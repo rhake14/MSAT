@@ -18,9 +18,14 @@ Imports:
     tidyverse (>= 1.2.1),
     dplyr,
     purrr,
-    tibble
+    tibble,
+    ggplot2,
+    plotly
 Suggests:
     codetools,
-    devtools (>= 1.13.6)
+    devtools (>= 1.13.6),
+    knitr,
+    rmarkdown
 Remotes: pmcharrison/psychTestR
 RoxygenNote: 7.1.1
+VignetteBuilder: knitr

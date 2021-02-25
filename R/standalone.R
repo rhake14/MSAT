@@ -26,6 +26,9 @@ debug_locally <- !grepl("shiny-server", getwd())
 #' which means ID should consist only of  alphanumeric characters.
 #' @param ... Further arguments to be passed to \code{\link{MSAT}()}.
 #' @export
+
+
+
 MSAT_standalone  <- function(title = NULL,
                            num_items = 18L,
                            with_id = TRUE,
@@ -33,11 +36,12 @@ MSAT_standalone  <- function(title = NULL,
                            with_welcome = TRUE,
                            admin_password = "test123",
                            researcher_email = "robin.hake@uni-oldenburg.de",
-                           languages = c("en", "de", "ru", "nl"),
+                           languages = c("en", "de"),
                            dict = MSAT::MSAT_dict,
                            validate_id = "auto",
                            ...) {
   feedback <- NULL
+  key <- NULL
   if(with_feedback) {
     feedback <- MSAT::MSAT_feedback_with_graph()
     #feedback <- MSAT::MSAT_feedback_with_score()

@@ -1,4 +1,4 @@
-# Emotion Discrimination Test (MSAT)
+# Musical Scene Ability Test (MSAT)
 
 
 The MSAT is an non-adaptive test for recognition of emotional interpretation of simple melodies.
@@ -30,7 +30,7 @@ x$packages[x$packages$package %in% c("MSAT", "psychTestR"), ]
 
 4. Install the MSAT:
 
-`devtools::install_github('klausfrieler/MSAT')`
+`devtools::install_github('rhake14/MSAT')`
 
 ## Usage
 
@@ -47,7 +47,7 @@ library(MSAT)
 MSAT_demo()
 
 # Run a demo test, skipping the training phase, and only asking 5 questions, as well a changinge the language
-MSAT_demo(num_items = 5, take_training = FALSE, language = "de")
+MSAT_demo(num_items = 5, language = "de")
 ```
 
 ### Testing a participant

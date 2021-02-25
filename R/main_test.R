@@ -1,11 +1,3 @@
-
-#' Title
-#'
-#' @return
-#' @export
-#'
-#' @examples
-#'
 scoring <- function(){
   psychTestR::code_block(function(state,...){
     #browser()

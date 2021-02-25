@@ -14,7 +14,7 @@
 #' the email address of this package's developer.
 #' @param dict The psychTestR dictionary used for internationalisation.
 #' @param language The language you want to run your demo in.
-#' Possible languages include English (\code{"en"}), German (\code{"de"}), Russian (\code{"ru"}) and Nederlands (\code{"nl"}).
+#' Possible languages include English (\code{"en"}), German (\code{"de"})).
 #' The first language is selected by default
 #' @param ... Further arguments to be passed to \code{\link{MSAT}()}.
 #' @export

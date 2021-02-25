@@ -3,5 +3,5 @@
 #' Lists the languages available for MSAT implementations.
 #' @export
 MSAT_languages <- function() {
-  c("en", "de", "ru", "nl" )
+  c("en", "de")
 }

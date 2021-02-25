@@ -29,7 +29,7 @@ MSAT <- function(num_items = 18L,
                 label = "MSAT",
                 feedback = MSAT_feedback_with_score(),
                 dict = MSAT::MSAT_dict) {
-  audio_dir <- "https://media.gold-msi.org/test_materials/MSAT"
+  audio_dir <- "https://drive.google.com/drive/folders/1LbMJRNrY3mTf75D_q7HpatT3mRrmfjTz?usp=sharing"
   # C:/Users/Hake Home PC/Dropbox/Uni Oldenburg/#3 - RStudio dateien/#4 - MSAT - main test R script/MSA/stimuli
   stopifnot(purrr::is_scalar_character(label),
             purrr::is_scalar_integer(num_items) || purrr::is_scalar_double(num_items),
