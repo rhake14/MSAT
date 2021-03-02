@@ -51,7 +51,7 @@ item_page <- function(item_number, item_id, num_items_in_test, audio_dir, dict =
            audio_file = item$audio_file[1],
            audio_dir = audio_dir,
            save_answer = TRUE)
-  #psychTestR::audio_NAFC_page(label = sprintf("%s-%s", item_number, num_items_in_test),
+  # psychTestR::audio_NAFC_page(label = sprintf("%s-%s", item_number, num_items_in_test),
   #                promp = get_prompt(item_number, num_items_in_test, emotion),
   #                choices = c("1", "2"),
   #                url = file.path(audio_dir, item$audio_file[1]))
@@ -108,3 +108,4 @@ MSAT_final_page <- function(dict = MSAT::MSAT_dict){
       )
     ), dict = dict)
 }
+

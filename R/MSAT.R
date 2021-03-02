@@ -29,8 +29,13 @@ MSAT <- function(num_items = 18L,
                 label = "MSAT",
                 feedback = MSAT_feedback_with_score(),
                 dict = MSAT::MSAT_dict) {
-  audio_dir <- "https://drive.google.com/drive/folders/1LbMJRNrY3mTf75D_q7HpatT3mRrmfjTz?usp=sharing"
+  # audio_dir <- "https://cloudstorage.elearning.uni-oldenburg.de/s/dX27M6zYjydbM6c/download"
+  # audio_dir <- "https://cloudstorage.elearning.uni-oldenburg.de/s/dX27M6zYjydbM6c"
+  # audio_dir <- "https://cloudstorage.elearning.uni-oldenburg.de/s/kMkEtZmEBz2tDDq"
+  audio_dir <- "C:/Users/Hake Home PC/Dropbox/Uni Oldenburg/#3 - RStudio dateien/#4 - MSAT - main test R script/MSA/stimuli"
+  # audio_dir <- "https://drive.google.com/drive/folders/1LbMJRNrY3mTf75D_q7HpatT3mRrmfjTz?usp=sharing"
   # C:/Users/Hake Home PC/Dropbox/Uni Oldenburg/#3 - RStudio dateien/#4 - MSAT - main test R script/MSA/stimuli
+  # audio_dir <- "https://media.gold-msi.org/test_materials/EDT"
   stopifnot(purrr::is_scalar_character(label),
             purrr::is_scalar_integer(num_items) || purrr::is_scalar_double(num_items),
             purrr::is_scalar_character(audio_dir),
@@ -38,7 +43,7 @@ MSAT <- function(num_items = 18L,
               is.list(feedback) ||
               psychTestR::is.test_element(feedback) ||
               is.null(feedback))
-  audio_dir <- gsub("/$", "", audio_dir)
+  # audio_dir <- gsub("/$", "", audio_dir)
 
   psychTestR::join(
     psychTestR::begin_module(label),

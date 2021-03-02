@@ -3,7 +3,6 @@ output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -14,9 +13,6 @@ knitr::opts_chunk$set(
 ```
 
 # MSAT
-
-<!-- badges: start -->
-<!-- badges: end -->
 
 The MSAT is an non-adaptive test for recognition of emotional interpretation of simple melodies.
 
@@ -93,7 +89,7 @@ and downloading your data.
 For more details on the psychTestR interface, 
 see http://psychtestr.com/.
 
-The MSAT currently supports English (en), German (de), Russian (ru), and Nederlands (nl).
+The MSAT currently supports English (en), German (de),
 You can select one of these languages by passing a language code as 
 an argument to `MSAT_standalone()`, e.g. `MSAT_standalone(languages = "de")`,
 or alternatively by passing it as a URL parameter to the test browser,
@@ -151,12 +147,3 @@ This makes the test better suited to testing with diverse participant groups
 - The MSAT runs in your web browser.
 - By default, image files are hosted online on our servers.
 The test therefore requires internet connectivity.
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(MSAT)
-## basic example code
-```
