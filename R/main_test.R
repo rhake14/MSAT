@@ -27,12 +27,12 @@ main_test <- function(label, num_items_in_test, audio_dir, dict = MSAT::MSAT_dic
   #browser()
   for(i in 1:length(item_sequence)){
     item <- MSAT::MSAT_item_bank[item_sequence[i],]
-    emotion <- psychTestR::i18n(item[1,]$emotion_i18)
+    # emotion <- psychTestR::i18n(item[1,]$emotion_i18)
     #printf("Emotion %s ", emotion)
     item_page <-
       MSAT_item(label = item$item_number[1],
                correct_answer = item$correct[1],
-               prompt = get_prompt(i, num_items_in_test, emotion),
+               prompt = get_prompt(i, num_items_in_test),
                audio_file = item$audio_file[1],
                audio_dir = audio_dir,
                save_answer = TRUE)
@@ -44,10 +44,10 @@ main_test <- function(label, num_items_in_test, audio_dir, dict = MSAT::MSAT_dic
 
 item_page <- function(item_number, item_id, num_items_in_test, audio_dir, dict = MSAT::MSAT_dict) {
   item <- MSAT::MSAT_item_bank %>% filter(item_number == item_id) %>% as.data.frame()
-  emotion <- psychTestR::i18n(item[1,]$emotion_i18)
+  # emotion <- psychTestR::i18n(item[1,]$emotion_i18)
   MSAT_item(label = item_id,
            correct_answer = item$correct[1],
-           prompt = get_prompt(item_number, num_items_in_test, emotion),
+           prompt = get_prompt(item_number, num_items_in_test),
            audio_file = item$audio_file[1],
            audio_dir = audio_dir,
            save_answer = TRUE)
@@ -57,7 +57,7 @@ item_page <- function(item_number, item_id, num_items_in_test, audio_dir, dict =
   #                url = file.path(audio_dir, item$audio_file[1]))
 }
 
-get_prompt <- function(item_number, num_items_in_test, emotion, dict = MSAT::MSAT_dict) {
+get_prompt <- function(item_number, num_items_in_test, dict = MSAT::MSAT_dict) {
   shiny::div(
     shiny::h4(
       psychTestR::i18n(
@@ -69,8 +69,7 @@ get_prompt <- function(item_number, num_items_in_test, emotion, dict = MSAT::MSA
       style  = "text_align:left"
     ),
     shiny::p(
-      psychTestR::i18n("ITEM_INSTRUCTION",
-                       sub = list(emotion = emotion)),
+      psychTestR::i18n("ITEM_INSTRUCTION",),
       style = "margin-left:20%;margin-right:20%;text-align:justify")
     )
 }

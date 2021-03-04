@@ -3,8 +3,8 @@
 
 # MSAT
 
-The MSAT is an non-adaptive test for recognition of emotional
-interpretation of simple melodies.
+The MSAT is an non-adaptive instrument to test musical scene analysis
+abilities among very diverse populations.
 
 ## Citation
 
@@ -85,50 +85,6 @@ one of these languages by passing a language code as an argument to
 alternatively by passing it as a URL parameter to the test browser, eg.
 <http://127.0.0.1:4412/?language=DE> (note that the `p_id` argument must
 be empty).
-
-## Installation instructions (Shiny Server)
-
-1.  Complete the installation instructions described under ‘Local use’.
-2.  If not already installed, install Shiny Server Open Source:
-    <https://www.rstudio.com/products/shiny/download-server/>
-3.  Navigate to the Shiny Server app directory.
-
-`cd /srv/shiny-server`
-
-4.  Make a folder to contain your new Shiny app. The name of this folder
-    will correspond to the URL.
-
-`sudo mkdir MSAT`
-
-5.  Make a text file in this folder called `app.R` specifying the R code
-    to run the app.
-
-<!-- end list -->
-
-  - To open the text editor: `sudo nano MSAT/app.R`
-  - Write the following in the text file:
-
-<!-- end list -->
-
-``` r
-library(MSAT)
-MSAT_standalone(admin_password = "put-your-password-here")
-```
-
-  - Save the file (CTRL-O).
-
-<!-- end list -->
-
-6.  Change the permissions of your app directory so that `psychTestR`
-    can write its temporary files there.
-
-`sudo chown -R shiny MSAT`
-
-where `shiny` is the username for the Shiny process user (this is the
-usual default).
-
-7.  Navigate to your new shiny app, with a URL that looks like this:
-    \`<http://my-web-page.org:3838/MSAT>
 
 ## Implementation notes
 

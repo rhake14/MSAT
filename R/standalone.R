@@ -83,3 +83,4 @@ MSAT_standalone  <- function(title = NULL,
                                    demo = FALSE,
                                    languages = tolower(languages)))
 }
+

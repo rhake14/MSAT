@@ -138,7 +138,7 @@ MSAT_item <- function(label = "",
   page_prompt <- shiny::div(prompt)
   #printf("MSAT item_called for  %s", label)
 
-  choices <- c("1", "2")
+  choices <- c("Yes", "No")
   audio_url <- file.path(audio_dir, audio_file)
   audio_NAFC_page_flex(label = label,
                        prompt = page_prompt,

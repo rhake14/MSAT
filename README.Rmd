@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 
 # MSAT
 
-The MSAT is an non-adaptive test for recognition of emotional interpretation of simple melodies.
+The MSAT is an non-adaptive instrument to test musical scene analysis abilities among very diverse populations.
 
 ## Citation
 
